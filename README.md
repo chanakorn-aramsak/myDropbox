@@ -14,7 +14,7 @@ myDropbox is a Python-based command-line application that allows you to securely
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/your-username/mydropbox.git
+    git clone https://github.com/chanakorn-aramsak/myDropbox.git
     ```
 
 2. Install required dependencies:
