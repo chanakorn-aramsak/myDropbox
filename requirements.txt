@@ -1,0 +1,6 @@
+base64
+sentry_sdk
+os
+requests
+python-dotenv
+dotenv
