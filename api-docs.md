@@ -83,8 +83,6 @@ curl --request GET \
 | file_name | Yes | The name of the file to upload, including the file extension. |
 | file | Yes | Base64-encoded content of the file to upload. |
 
-**drive_spreadsheetExport to Sheets**
-
 **Success Response:**
 
 - Status code 200: File uploaded successfully.
