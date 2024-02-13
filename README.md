@@ -23,6 +23,12 @@ myDropbox is a Python-based command-line application that allows you to securely
     pip install -r requirements.txt
     ```
 
+3. Create a `.env` file in the root directory of the project and add the following line:
+
+    ```env
+    API_GATEWAY=<your_api_gateway_url>
+    ```
+
 **Usage:**
 
 1. Start the application:
