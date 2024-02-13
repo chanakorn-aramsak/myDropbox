@@ -27,14 +27,15 @@ def list_files_for_owner(owner):
 
 def get_file_url(owner, file_name):
     """Generates a presigned URL for downloading a file."""
+    files = list_files_for_owner(owner)
     file_key = _get_object_key(owner, file_name)
-    if file_key not in list_files_for_owner(owner):
+    
+    if file_name not in files:
         return None
+    file_key = f'{owner}/{file_name}'
     try:
-        return s3.generate_presigned_url(
-            Params={'Bucket': BUCKET_NAME, 'Key': file_key}, ExpiresIn=3600,
-            HttpMethod='GET'
-        )
+        file_url = s3.generate_presigned_url('get_object', Params={'Bucket': BUCKET_NAME, 'Key': file_key}, ExpiresIn=3600)
+        return file_url
     except Exception as e:
         print(f"Error generating URL for {file_key}: {e}")
         return None
